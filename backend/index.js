@@ -12,7 +12,7 @@ app.use(cors());
 
 // MongoDB Connection
 mongoose.connect(
-  "mongodb+srv://kawsarbinjahangir:mWIlmJjfHvxBTJpC@cluster0.ngiowav.mongodb.net/school",
+  "mongodb+srv://kawsarbinjahangir:mWIlmJjfHvxBTJpC@cluster0.ngiowav.mongodb.net/shofiq",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
