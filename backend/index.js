@@ -1,3 +1,4 @@
+// app.js
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -19,17 +20,16 @@ mongoose.connect(
   }
 );
 
-// Define Madrasa Schema and Model (Replace 'path-to-your-madrasa-model' with the actual path)
-
-// Require Madrasa Routes (Replace 'path-to-your-madrasa-routes' with the actual path)
-const authRoutes = require("./routes/authController");
-
-// Use Madrasa Routes
-app.use("/api/auth/", authRoutes);
+// Poultry Food Routes
+const poultryFoodRoutes = require("./routes/foodRoutes");
+const supplierTransiction = require("./routes/supplierTransactionRoute");
+app.use("/api/poultry-food/", poultryFoodRoutes);
+app.use("/api/supplier-transiction/", supplierTransiction);
 
 app.get("/test", (req, res) => {
   res.send("This is a test endpoint!");
 });
+
 // Start Server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
